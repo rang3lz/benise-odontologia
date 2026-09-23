@@ -70,7 +70,16 @@
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
   body{
-    background:var(--bg);
+    background:linear-gradient(180deg,
+      var(--bg) 0%,
+      var(--bg-alt) 12%,
+      var(--bg) 24%,
+      var(--bg-alt) 38%,
+      var(--bg-nude) 52%,
+      var(--bg-alt) 66%,
+      var(--bg) 78%,
+      var(--bg-nude) 90%,
+      var(--bg-alt) 100%);
     color:var(--ink);
     font-family:var(--font-sans);
     font-size:16px;
@@ -107,8 +116,8 @@
   section{position:relative;}
   .section-pad{padding-block:clamp(64px,10vw,128px);}
   .section-pad-sm{padding-block:clamp(40px,6vw,72px);}
-  .bg-alt{background:linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 50%, var(--bg) 100%);}
-  .bg-nude{background:linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-nude) 50%, var(--bg-alt) 100%);}
+  .bg-alt{background:transparent;}
+  .bg-nude{background:transparent;}
 
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:.6em;
@@ -337,7 +346,7 @@
   .cta-final .eyebrow{justify-content:center;}
 
   /* ---------- Footer ---------- */
-  .site-footer{background:linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);border-top:1px solid var(--line);}
+  .site-footer{background:transparent;border-top:1px solid var(--line);}
   .footer-grid{display:grid;gap:40px;padding-block:56px 32px;}
   @media (min-width:760px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr;}}
   .footer-brand .brand{margin-bottom:14px;}
